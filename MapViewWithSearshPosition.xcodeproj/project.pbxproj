@@ -14,6 +14,10 @@
 		017B04922A5D4B56003062DA /* MapViewWithSearshPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017B04912A5D4B56003062DA /* MapViewWithSearshPositionTests.swift */; };
 		017B049C2A5D4B56003062DA /* MapViewWithSearshPositionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017B049B2A5D4B56003062DA /* MapViewWithSearshPositionUITests.swift */; };
 		017B049E2A5D4B56003062DA /* MapViewWithSearshPositionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017B049D2A5D4B56003062DA /* MapViewWithSearshPositionUITestsLaunchTests.swift */; };
+		017B04B42A5D4C9C003062DA /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017B04AE2A5D4C9C003062DA /* MapViewModel.swift */; };
+		017B04B52A5D4C9C003062DA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017B04B02A5D4C9C003062DA /* MapView.swift */; };
+		017B04B62A5D4C9C003062DA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017B04B12A5D4C9C003062DA /* Home.swift */; };
+		017B04B72A5D4C9C003062DA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017B04B32A5D4C9C003062DA /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		017B04972A5D4B56003062DA /* MapViewWithSearshPositionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapViewWithSearshPositionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		017B049B2A5D4B56003062DA /* MapViewWithSearshPositionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWithSearshPositionUITests.swift; sourceTree = "<group>"; };
 		017B049D2A5D4B56003062DA /* MapViewWithSearshPositionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWithSearshPositionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		017B04AE2A5D4C9C003062DA /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		017B04B02A5D4C9C003062DA /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		017B04B12A5D4C9C003062DA /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		017B04B32A5D4C9C003062DA /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 		017B047F2A5D4B53003062DA /* MapViewWithSearshPosition */ = {
 			isa = PBXGroup;
 			children = (
+				017B04B22A5D4C9C003062DA /* Model */,
+				017B04AF2A5D4C9C003062DA /* View */,
+				017B04AD2A5D4C9C003062DA /* ViewModel */,
 				017B04802A5D4B53003062DA /* MapViewWithSearshPositionApp.swift */,
 				017B04822A5D4B53003062DA /* ContentView.swift */,
 				017B04842A5D4B55003062DA /* Assets.xcassets */,
@@ -125,6 +136,31 @@
 				017B049D2A5D4B56003062DA /* MapViewWithSearshPositionUITestsLaunchTests.swift */,
 			);
 			path = MapViewWithSearshPositionUITests;
+			sourceTree = "<group>";
+		};
+		017B04AD2A5D4C9C003062DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				017B04AE2A5D4C9C003062DA /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		017B04AF2A5D4C9C003062DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				017B04B02A5D4C9C003062DA /* MapView.swift */,
+				017B04B12A5D4C9C003062DA /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		017B04B22A5D4C9C003062DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				017B04B32A5D4C9C003062DA /* Place.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				017B04832A5D4B53003062DA /* ContentView.swift in Sources */,
+				017B04B52A5D4C9C003062DA /* MapView.swift in Sources */,
+				017B04B62A5D4C9C003062DA /* Home.swift in Sources */,
+				017B04B72A5D4C9C003062DA /* Place.swift in Sources */,
 				017B04812A5D4B53003062DA /* MapViewWithSearshPositionApp.swift in Sources */,
+				017B04B42A5D4C9C003062DA /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +460,8 @@
 				DEVELOPMENT_TEAM = J6CR3N3ZH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "l'application a besoin de ton lacalisation pour utiliser la map";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "l'application a besoin de ton lacalisation pour utiliser la map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +491,8 @@
 				DEVELOPMENT_TEAM = J6CR3N3ZH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "l'application a besoin de ton lacalisation pour utiliser la map";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "l'application a besoin de ton lacalisation pour utiliser la map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
